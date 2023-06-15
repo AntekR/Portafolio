@@ -10,7 +10,6 @@
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" />
-    <meta X-Content-Security-Policy: default-src 'none'/>
     <title>Portafolio</title>
   </head>
   <body>
@@ -77,22 +76,25 @@
       </p>
       <img src="imgs/firma.png" style="background: none;" width="100px" alt="">
     </section>
-    <section >
+    <section class="sk_ho">
+        <h2 style="text-align:  center;">Skills</h2>
+        <div class="skills">
+            
+            <div class="cuadro"><img src="imgs/html.png" alt=""><p>Html5</p></div>
+            <div class="cuadro"><img src="imgs/css.png" alt=""><p>CSS</p></div>
+            <div class="cuadro"><img src="imgs/js.png" alt=""><p>Javascript</p></div>
+            <div class="cuadro"><img src="imgs/py.png" alt=""><p>Python</p></div>
+        </div>
+        <h2 style="text-align:  center; padding-top: 50px; ">Hobbies</h2>
+        <div class="skills">
+            
+            <div class="cuadro"><img src="imgs/futbol.png" width="32px" alt=""><p>Jugar fútbol</p></div>
+            <div class="cuadro"><img src="imgs/leer.png" alt=""><p>Leer</p></div>
+            <div class="cuadro"><img src="imgs/escucha.png" alt=""><p style="font-size: 12px;">Escuchar música</p></div>
+            <div class="cuadro"><img src="imgs/destino.png" alt=""><p>Viajar</p></div>
+        </div>
 
     </section> 
   </body>
-  <script>
-    const express = require('express');
-    const helmet = require('helmet');
 
-    const app = express();
-    app.use(helmet());
-
-    // Resto de la configuración y rutas de la aplicación
-
-    app.listen(3000, () => {
-    console.log('Servidor en funcionamiento en el puerto 3000');
-    });
-
-  </script>
 </html>
