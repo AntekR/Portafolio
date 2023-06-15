@@ -26,7 +26,7 @@
 }
 
 .navbar div img{
-    padding-inline-start: 30px;
+    padding-inline-start: 70px;
     padding-right: 10px;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .navbar ul li{
-    padding-inline-end: 30px;
+    padding-inline-end: 70px;
     padding-left: 16px;
 }
 
@@ -46,8 +46,8 @@
 
 .info{
     display: flex;
-    padding-inline-end: 30px;
-    padding-inline-start: 30px;
+    padding-inline-end: 70px;
+    padding-inline-start: 70px;
     padding-top: 50px;
     text-align: justify;
     align-items: center;
@@ -73,4 +73,14 @@
 }
 
 /*Seccion de sobre mi*/
+.forMe{
+    padding-top: 100px;
+    padding-inline-start: 70px;
+    padding-inline-end: 70px ;
+    text-align: justify;
+    background: #dac9df;
+}
+
+
+.forMe p{ background: #dac9df;}
 
