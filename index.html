@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" />
+    <meta X-Content-Security-Policy: default-src 'none'/>
     <title>Portafolio</title>
   </head>
   <body>
@@ -61,7 +62,7 @@
       <h2 style="background: #dac9df;">Sobre mi</h2>
       <br>
       <p>
-        Soy una persona apasionada y comprometidad con un aprendizaje constante. Actualmente,e studio ingeniería en Sistemas e Informatica
+        Soy una persona apasionada y comprometidad con un aprendizaje constante. Actualmente, estudio ingeniería en Sistemas e Informatica
         y ingeniería en Telecomunicaciones, lo cual me permite tener un enfoque y una formación en el ambito tecnológico. Tambien tengo un titulo
         tecnico en Contabilidad permitiendome tener un conocimiento en el área administrativa.
       </p><br>
@@ -76,5 +77,22 @@
       </p>
       <img src="/imgs/firma.png" style="background: none;" width="100px" alt="">
     </section>
+    <section >
+
+    </section> 
   </body>
+  <script>
+    const express = require('express');
+    const helmet = require('helmet');
+
+    const app = express();
+    app.use(helmet());
+
+    // Resto de la configuración y rutas de la aplicación
+
+    app.listen(3000, () => {
+    console.log('Servidor en funcionamiento en el puerto 3000');
+    });
+
+  </script>
 </html>
