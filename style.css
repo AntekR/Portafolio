@@ -8,120 +8,71 @@
     color: black;
 
 }
-
+body{
+    overflow-x: hidden;
+}
 /* Seccion de navegacion */
 
-.navbar {
+.logo {
     display: flex;
-    padding-inline-start: 70px;
-    padding-inline-end: 70px ;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 15px;
-    height: 40px;
+    margin-right: 16px;
 }
-
-.navbar div {
+.nav-principal {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    margin: 32px;
 }
-
-.navbar div img{
-    display: flex;
-    padding-inline-start: 70px;
-    padding-right: 10px;
-}
-
-.navbar ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-}
-
-.navbar ul li{
-    padding-inline-end: 70px;
-    padding-left: 16px;
-}
-
-/* header */
-
-.info{
-    display: flex;
-    padding-inline-end: 70px;
-    padding-inline-start: 70px;
-    padding-top: 50px;
-    text-align: justify;
-    align-items: center;
-
-}
-.info ul{
+.mobile-nav{display: none;}
+.menu-principal {
     display: flex;
     list-style: none;
-    padding-left: 0%;
+    padding: 0;
+}
+.submenu { margin-right: 16px; background: none;}
 
-}
-.info ul li{
-    display: flex;
-    padding-right: 20px;
-}
-
-.info ul li img{
-    padding: 2%;
-}
-
-.info img{ 
-    padding-left: 50px;
-}
-
-/*Seccion de sobre mi*/
-.forMe{
-    padding-top: 100px;
-    padding-inline-start: 70px;
-    padding-inline-end: 70px ;
-    text-align: justify;
-    background: #dac9df;
-}
-.forMe p{ background: #dac9df;}
-
-/*seccion skill y hobies*/
-.sk_ho{
-    padding-top: 70px;
-}
-
-.skills{
-    display: flex;
-    padding-top: 15px;
-    padding-inline-start: 70px;
-    padding-inline-end: 70px ;
-    align-items: center;
-    justify-content: space-between;
-}
-.cuadro{
-    position: relative;
-    width: 120px;
-    height: 100px;
-    background-color: rgba(190, 190, 190, 0.767);
-    margin-left: 5px;
-    border-radius: 5px;
-}
-
-.cuadro img{
-    position: absolute;
-    top: 38%;
-    left: 10%;
-    max-width: 100%;
-    max-height: 100%;
+#area-hidden{
+    text-decoration: none;
     background: none;
-    
-}
-.cuadro p{
-    background: none;
-    position: absolute;
-    top:73%;
-    left: 10%;
-    font-size: small;
     font-weight: bold;
+}
+@media (max-width: 40rem) {
+    .menu-principal{
+        --gap: 2rem;
+        position: fixed;
+        inset: 0 0 0 60%;
+        z-index: 1000;
+
+        flex-direction: column;
+        padding: min(30vh,2rem);
+        padding-left: 2%;
+
+        background:  hsla(288, 67%, 51%, 0.1);
+        backdrop-filter: blur(16px);
+
+        transform: translateX(100%);
+        transition:  350ms ease-in;
+        
+    }
+    .menu-principal[data-visible="false"]{
+        transform: translateX(0%);
+    }
+    .mobile-nav {
+        display: block;
+        z-index: 9999;
+        position: absolute; 
+        background: transparent;
+        background: url("imgs/boton.png");
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        right: 10px;
+        border: none;
+    
+    }
+    .mobile-nav[aria-expanded="false"]{
+        background-image: url("imgs/x.png");
+        border: none;
+    }
 }

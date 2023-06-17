@@ -10,24 +10,39 @@
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
     <title>Portafolio</title>
   </head>
   <body>
-    <nav class="navbar">
-      <div>
-        <img src="imgs/estrella.png" width="14px" alt="" />
+    <nav class="nav-principal">
+      <div class="logo flex">
+        <img src="imgs/estrella.png" width="14px" alt="" class="logo" />
         <h4>Angie Solano</h4>
       </div>
-      <ul>
-        <li><a href="#skills">Sobre mi</a></li>
-        <li><a href="">Skills</a></li>
-        <li><a href="">Hobbies</a></li>
-        <li><a href="">Formación</a></li>
-        <li><a href="">Proyectos</a></li>
-        <li><a href="mailto:solanorodriguez.atsr@gmail.com">Correo</a></li>
+
+      <button
+        class="mobile-nav"
+        aria-controls="menu-principal"
+        aria-expanded="false"
+      >
+        <span class="sr-only"></span>
+      </button>
+
+      <ul  id="menu-principal" data-visible="false" class="menu-principal flex">
+        <li class="submenu"><a id="area-hidden" href="#skills">Sobre mi</a></li>
+        <li class="submenu"><a id="area-hidden" href="">Skills</a></li>
+        <li class="submenu"><a id="area-hidden" href="">Hobbies</a></li>
+        <li class="submenu"><a id="area-hidden" href="">Formación</a></li>  
+        <li class="submenu"><a id="area-hidden" href="">Proyectos</a></li>
+        <li class="submenu">
+          <a id="area-hidden" href="mailto:solanorodriguez.atsr@gmail.com"
+            >Correo</a
+          >
+        </li>
       </ul>
     </nav>
-    <header class="info">
+
+    <header class="header_primary">
       <div>
         <h1>
           ¡Hey! Me llamo Angie Solano y este es mi portafolio, además estoy
@@ -58,43 +73,73 @@
       </div>
     </header>
     <section class="forMe">
-      <h2 style="background: #dac9df;" id="skills">Sobre mi</h2>
-      <br>
+      <h2 style="background: #dac9df" id="skills">Sobre mi</h2>
+      <br />
       <p>
-        Soy una persona apasionada y comprometidad con un aprendizaje constante. Actualmente, estudio ingeniería en Sistemas e Informatica
-        y ingeniería en Telecomunicaciones, lo cual me permite tener un enfoque y una formación en el ambito tecnológico. Tambien tengo un titulo
-        tecnico en Contabilidad permitiendome tener un conocimiento en el área administrativa.
-      </p><br>
-      <p>
-        Me gusta leer, esto me permite muchas veces desestresarme y relajar mi mente para así luego continuar con mis diferentes de una manera más
-        tranquila. Además me encanta el deporte en equipo, como el baloncesto, voleibol y futbol, en especial este ultimo, el cual me permite mantener
-        mi cuerpo activo y promover el trabajo en equipo.
-      </p><br>
-      <p>
-        Una de mis fortalezas es mi capacidad o curiosidad por abordar nuevos temas, constantemente busco oportunidades para aprender y mejorar tanto
-        personal como profesional, aparte de esto manejo diversos programas como Excel, Word, OneNote, OneDrive, Helissa entre otros programas. 
+        Soy una persona apasionada y comprometidad con un aprendizaje constante.
+        Actualmente, estudio ingeniería en Sistemas e Informatica y ingeniería
+        en Telecomunicaciones, lo cual me permite tener un enfoque y una
+        formación en el ambito tecnológico. Tambien tengo un titulo tecnico en
+        Contabilidad permitiendome tener un conocimiento en el área
+        administrativa.
       </p>
-      <img src="imgs/firma.png" style="background: none;" width="100px" alt="">
+      <br />
+      <p>
+        Me gusta leer, esto me permite muchas veces desestresarme y relajar mi
+        mente para así luego continuar con mis diferentes de una manera más
+        tranquila. Además me encanta el deporte en equipo, como el baloncesto,
+        voleibol y futbol, en especial este ultimo, el cual me permite mantener
+        mi cuerpo activo y promover el trabajo en equipo.
+      </p>
+      <br />
+      <p>
+        Una de mis fortalezas es mi capacidad o curiosidad por abordar nuevos
+        temas, constantemente busco oportunidades para aprender y mejorar tanto
+        personal como profesional, aparte de esto manejo diversos programas como
+        Excel, Word, OneNote, OneDrive, Helissa entre otros programas.
+      </p>
+      <img src="imgs/firma.png" style="background: none" width="100px" alt="" />
     </section>
     <section class="sk_ho">
-        <h2 style="text-align:  center;">Skills</h2>
-        <div class="skills">
-            
-            <div class="cuadro"><img src="imgs/html.png" alt=""><p>Html5</p></div>
-            <div class="cuadro"><img src="imgs/css.png" alt=""><p>CSS</p></div>
-            <div class="cuadro"><img src="imgs/js.png" alt=""><p>Javascript</p></div>
-            <div class="cuadro"><img src="imgs/py.png" alt=""><p>Python</p></div>
+      <h2 style="text-align: center">Skills</h2>
+      <div class="skills">
+        <div class="cuadro">
+          <img src="imgs/html.png" alt="" />
+          <p>Html5</p>
         </div>
-        <h2 style="text-align:  center; padding-top: 50px; ">Hobbies</h2>
-        <div class="skills">
-            
-            <div class="cuadro"><img src="imgs/futbol.png" width="32px" alt=""><p>Jugar fútbol</p></div>
-            <div class="cuadro"><img src="imgs/leer.png" alt=""><p>Leer</p></div>
-            <div class="cuadro"><img src="imgs/escucha.png" alt=""><p style="font-size: 12px;">Escuchar música</p></div>
-            <div class="cuadro"><img src="imgs/destino.png" alt=""><p>Viajar</p></div>
+        <div class="cuadro">
+          <img src="imgs/css.png" alt="" />
+          <p>CSS</p>
         </div>
-
-    </section> 
+        <div class="cuadro">
+          <img src="imgs/js.png" alt="" />
+          <p>Javascript</p>
+        </div>
+        <div class="cuadro">
+          <img src="imgs/py.png" alt="" />
+          <p>Python</p>
+        </div>
+      </div>
+      <h2 style="text-align: center; padding-top: 50px">Hobbies</h2>
+      <div class="skills">
+        <div class="cuadro">
+          <img src="imgs/futbol.png" width="32px" alt="" />
+          <p>Jugar fútbol</p>
+        </div>
+        <div class="cuadro">
+          <img src="imgs/leer.png" alt="" />
+          <p>Leer</p>
+        </div>
+        <div class="cuadro">
+          <img src="imgs/escucha.png" alt="" />
+          <p style="font-size: 12px">Escuchar música</p>
+        </div>
+        <div class="cuadro">
+          <img src="imgs/destino.png" alt="" />
+          <p>Viajar</p>
+        </div>
+      </div>
+    </section>
   </body>
-
+  
 </html>
