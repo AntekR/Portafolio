@@ -36,6 +36,33 @@ body{
     background: none;
     font-weight: bold;
 }
+
+/*Seccion header*/
+
+.header_primary{
+    display: flex;
+    margin: 32px;
+    margin-top: 100px;
+    align-items: center;
+}
+.redes{
+    display: inline-flex;
+    padding: 0%;
+    list-style: none;
+}
+.redes li { margin-right: var(--gap,15px);}
+
+/*Seccion sobre mi*/
+.forMe {
+    padding: 32px;
+    background: #dac9df;
+}
+.forMe h3, .forMe p{
+    text-align: justify;
+    background: #dac9df;
+}
+
+/*Responsive*/
 @media (max-width: 40rem) {
     .menu-principal{
         --gap: 2rem;
@@ -54,7 +81,7 @@ body{
         transition:  350ms ease-in;
         
     }
-    .menu-principal[data-visible="false"]{
+    .menu-principal[data-visible="true"]{
         transform: translateX(0%);
     }
     .mobile-nav {
@@ -71,8 +98,15 @@ body{
         border: none;
     
     }
-    .mobile-nav[aria-expanded="false"]{
+    .mobile-nav[aria-expanded="true"]{
         background-image: url("imgs/x.png");
         border: none;
+    }
+
+    .header_primary{
+        position: relative;
+        flex-direction: column-reverse;
+        margin: 32px;
+
     }
 }
