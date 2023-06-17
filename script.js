@@ -13,16 +13,3 @@ mobileNav.addEventListener("click", () => {
     mobileNav.setAttribute("aria-expanded", "false")
   }
 });
-
-/*
-  if (visibilidad === "false") {
-
-    menu.setAttribute("data-visible", true);
-    mobileNav.setAttribute("aria-expanded", true)
-
-  } else if (visibilidad === "true") {
-
-    menu.setAttribute("data-visible", false);
-    mobileNav.setAttribute("aria-expanded", false)
-  }
-*/
